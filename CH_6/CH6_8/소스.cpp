@@ -1,31 +1,37 @@
 #include <iostream>
-#include <cstddef>
+
 using namespace std;
-void dosomething(double* ptr) {
-	if (ptr!= nullptr) {
-		cout << *ptr << endl;
-		//blah
-	}
-	else {
-		//blah blah
-		cout << "Null ptr, do nothing" << endl;
-
-	}
-
-
+//int arr[]==int *arr
+struct My {
+	int arr[5] = { 9,7,5,3,1 };
+};
+void printarr(My ms){
+	cout << sizeof(ms.arr) << endl;
 
 }
-
 int main() {
-	double* ptr = NULL; //C-style
-	int* ptr_n = nullptr;//modern c++
-	dosomething(ptr);
-	dosomething(nullptr);
-	double d = 123.4;
-	dosomething(&d);
-	nullptr_t nptr;//널포인터만 가능한 변수
-	cout << "address of pointer varaible in main()" << ptr << endl;
-	dosomething(ptr);
+	////arr의 주소
+	//cout << arr << endl;
+	//cout << &arr[0] << endl;
+	//cout << *arr << endl;
+	////char name[] = "jackjack";
+	////cout << *name << endl;
+	//int* ptr = arr;
+	////not same
+	//cout << sizeof(arr) << endl;
+	//cout << sizeof(ptr) << endl;
+	//printarr(arr);
+	////포인터 연산 
+	//cout << *ptr << " " <<*(ptr + 1) << endl;
+	My ms;
+	cout << ms.arr[0] << endl;
+	printarr(ms);
+
+
+
 	return 0;
+
+
+
 
 }
