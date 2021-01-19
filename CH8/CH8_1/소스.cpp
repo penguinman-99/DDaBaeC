@@ -17,6 +17,7 @@ class Friend_profile {
 };
 
 int main() {
+
 	vector<Friend_profile> myfriend(10);
 	//instanciation
 	myfriend[0]={ "kim","town",15,34,33 };
