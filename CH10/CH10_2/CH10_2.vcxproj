@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{7310308e-74e3-4f70-b449-5e34ff754459}</ProjectGuid>
-    <RootNamespace>CH10</RootNamespace>
+    <ProjectGuid>{7ac941b0-8d1a-4e12-a708-8c28f0dd19f2}</ProjectGuid>
+    <RootNamespace>CH102</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,7 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CH10.cpp" />
+    <ClCompile Include="CH10_2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="monster.h" />
+    <ClInclude Include="Positioon2D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
