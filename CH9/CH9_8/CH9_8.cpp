@@ -25,6 +25,7 @@ public:
 		return Cents(m_dollar*100);
 	}
 };
+
 void printInt(const int& value) {
 	cout << value << endl;
 

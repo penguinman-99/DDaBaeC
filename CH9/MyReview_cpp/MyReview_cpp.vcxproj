@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{02592872-7a57-40f6-b28f-e6a7dc3dfaa9}</ProjectGuid>
-    <RootNamespace>CH96</RootNamespace>
+    <ProjectGuid>{e1cd4dea-5648-4ef9-ba19-72309a1b8764}</ProjectGuid>
+    <RootNamespace>MyReviewcpp</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CH9_6.cpp" />
+    <ClCompile Include="review_source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
