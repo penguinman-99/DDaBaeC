@@ -6,8 +6,8 @@
 class Lecture {
 private:
 	std::string m_name;
-	Teacher teacher;
-	std::vector<Student> students;
+	Teacher *teacher;
+	std::vector<Student*> students;
 
 public:
 	Lecture(const std::string& name_in) 
@@ -17,26 +17,29 @@ public:
 	~Lecture() {
 
 	}
-	void assignTeacher(const Teacher& const teacher_input) {
+	void assignTeacher(Teacher * const teacher_input) {
 		teacher = teacher_input;
 
 	}
 
-	void registerStudent(const Student& const student_input) {
+	void registerStudent(Student * const student_input) {
 		students.push_back(student_input);
 
+		//&student_input, students[0] 주소가 다름. 
 	}
 	void study() {
 		std::cout << m_name << " study " << std::endl << std::endl;
-		for (auto& e : students)
-			e.setIntel(e.getIntel() + 1);
-
+		//for (auto& e : students)
+		//	e.setIntel(e.getIntel() + 1);
+		for (auto &element : students) {
+			(element->setIntel(element->getIntel() + 1));
+		}
 	}
 	friend std::ostream& operator <<(std::ostream& out, const Lecture& lecture) {
 		out << "lecture name:" << lecture.m_name << std::endl;
 		out << lecture.teacher << std::endl;
 		for (auto element : lecture.students)
-			out << element << std::endl;
+			out << *element << std::endl;
 		return out;
 	}
 

@@ -12,14 +12,14 @@ int main() {
 	Teacher teacher2("prof.good");
 
 	Lecture lec1("introduction to computer pro");
-	lec1.assignTeacher(teacher1);
-	lec1.registerStudent(std1);
-	lec1.registerStudent(std2);
-	lec1.registerStudent(std3);
+	lec1.assignTeacher(&teacher1);
+	lec1.registerStudent(&std1);
+	lec1.registerStudent(&std2);
+	lec1.registerStudent(&std3);
 	
 	Lecture lec2("computational thinking");
-	lec2.assignTeacher(teacher2);
-	lec2.registerStudent(std1);
+	lec2.assignTeacher(&teacher2);
+	lec2.registerStudent(&std1);
 	cout << lec1 << endl;
 	cout << lec2 << endl;
 	lec2.study();

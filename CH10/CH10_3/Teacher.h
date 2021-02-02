@@ -10,6 +10,9 @@ public:
 	void setName(const std::string& name_in) {
 		m_name = name_in;
 	}
+	std::string getNmae() {
+		return m_name;
+	}
 	friend std::ostream& operator <<(std::ostream& out, const Teacher teacher) {
 		out << teacher.m_name;
 		return out;
